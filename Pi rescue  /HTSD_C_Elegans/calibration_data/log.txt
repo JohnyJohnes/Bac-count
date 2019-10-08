@@ -1,0 +1,8 @@
+HTSD_C_Elegans.py_1558470728131_(0,0).png, (0,0),
+HTSD_C_Elegans.py_1558470731127_(600,0).png, (600,0),
+HTSD_C_Elegans.py_1558470734789_(-600,0).png, (-600,0),
+HTSD_C_Elegans.py_1558470738265_(600,0).png, (600,0),
+HTSD_C_Elegans.py_1558470741500_(0,0).png, (0,0),
+HTSD_C_Elegans.py_1558470745035_(1200,0).png, (1200,0),
+HTSD_C_Elegans.py_1558470748449_(566,0).png, (566,0),
+

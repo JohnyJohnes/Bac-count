@@ -1,0 +1,25 @@
+Solution for Qt5 on Raspberry Pi 3 errors: Unable to query physical screen size.
+
+ 
+
+
+This is a solution to fix the problem on Raspberry Pi 3 with Qt 5.8
+
+
+open the bashrc: $sudo nano ~/.bashrc
+
+in the file add:
+
+export QT_QPA_EGLFS_PHYSICAL_WIDTH="230mm"
+
+export QT_QPA_EGLFS_PHYSICAL_HEIGHT="180mm"
+
+tip: you can try with different size, in my case I've got a display of 7" but I configure with 11.6" and looks great, 
+the size you can check in: https://en.wikipedia.org/wiki/Display_size
+
+save the file
+
+$sudo source ~/.bashrc
+
+In Qt Creator ever show the error when compiling is normal, but when you run your application from console the error's gone, 
+other tool help the application, look better use qt5ct help a lot.

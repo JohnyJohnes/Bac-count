@@ -1,0 +1,59 @@
+void analyseBlobs( const image_t *img
+                 , const uint8_t blobnr
+                 ,       blobinfo_t *blobInfo
+                 )
+{
+    int32_t  y,
+             x,
+             yStart,
+             xStart,
+             yEnd,
+             xEnd;
+
+    uint32_t pixelCount;
+    float    perimeter;
+
+    yStart = img->cols;
+    xStart = img->rows;
+    yEnd   = 0;
+    xEnd   = 0;
+
+    pixelCount = 0;
+    perimeter  = 0;
+
+    for(x = 0; x < img->cols; x++)
+    {
+        for(y = 0; y < img->rows; y++)
+        {
+
+            if(BASIC_PIXEL(img, x, y) == blobnr)
+            {
+                //Find Blob height
+                if(y < yStart)
+                    yStart = y;
+
+                if(y > yEnd)
+                    yEnd   = y;
+
+                //Find Blob Width
+                if(x < xStart){ xStart = x; }
+                if(x > xEnd){ xEnd   = x; }
+                //Count pixels in blob
+                pixelCount++;
+
+                //Perimeter of blob
+                if(neighbourCount(img, x, y, 0, FOUR) == 1)
+                    perimeter++;
+                if(neighbourCount(img, x, y, 0, FOUR) == 2)
+                    perimeter += sqrt(2);
+                if(neighbourCount(img, x, y, 0, FOUR) == 3)
+                    perimeter += sqrt(5);
+            }
+        }
+    }
+    blobInfo->height = 1 + yEnd - yStart;
+    blobInfo->width  = 1 + xEnd - xStart;
+    blobInfo->nof_pixels = pixelCount;
+    blobInfo->perimeter  = perimeter;
+
+    return;

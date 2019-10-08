@@ -1,0 +1,2 @@
+cropLeft,cropTop,cropWidth,cropHeight,rotAngle [x100],totRoIArea,nonRoILaplacian,row_grid_found,RMS_row_contrast,RMS_row_sharpnesss [x100],mean_row,mean_row_not_mask,col_grid_found,RMS_col_contrast,RMS_col_sharpnesss [x100],mean_col,mean_col_not_mask
+100,0,2030,2170,120,778240,298,0,128,153,132,129,1,247,169,132,133
