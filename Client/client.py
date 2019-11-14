@@ -6,7 +6,7 @@ import select
 from time import gmtime, strftime
 from random import randint
 
-image = "thumbnail.jpeg"
+image = 'test.jpeg'
 
 HOST = '127.0.0.1'
 PORT = 6666
