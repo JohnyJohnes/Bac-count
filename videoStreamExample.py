@@ -8,10 +8,10 @@ from http import server
 PAGE="""\
 <html>
 <head>
-<title>Raspberry Pi - Surveillance Camera</title>
+<title>Raspberry Pi - Live Camera</title>
 </head>
 <body>
-<center><h1>Raspberry Pi - Surveillance Camera</h1></center>
+<center><h1>Raspberry Pi - Live Camera</h1></center>
 <center><img src="stream.mjpg" width="640" height="480"></center>
 </body>
 </html>
